@@ -1,0 +1,21 @@
+### data ingestor
+POST http://localhost:7071/api/data/upload_json
+
+[
+    {
+        "id": "3",
+        "title": "Azure Cognitive Services",
+        "content": "Azure Cognitive Services are a set of AI services that enable you to build intelligent applications with powerful algorithms using just a few lines of code. These services cover a wide range of capabilities, including vision, speech, language, knowledge, and search. They are designed to be easy to use and integrate into your applications. Cognitive Services are fully managed, scalable, and continuously improved by Microsoft. It allows developers to create AI-powered solutions without deep expertise in machine learning.",
+        "category": "AI + Machine Learning"
+    }
+]
+
+
+
+
+
+### chat
+GET http://localhost:7071/api/chat?query=静的サイトをホストできるサービスを教えて
+
+
+

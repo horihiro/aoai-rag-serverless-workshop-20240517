@@ -1,0 +1,99 @@
+name: AOAI workshop template
+description: AOAI workshop plan
+title: "[顧客名を入力]: [AOAI Workshop]"
+labels: ["aoai-workshop"]
+body:
+- type: input
+  id: date
+  attributes:
+    label: 開催日
+    description: 未定の場合は「🔖未定」。入力例「2024年1月10日 13時-17時」「2024年1月10日🔖時間未定」
+    placeholder: ex. 2024年1月10日 13-17時 や 2024年1月10日🔖時間未定
+    value: "🔖未定"
+  validations:
+    required: false
+- type: input
+  id: location
+  attributes:
+    label: 開催場所
+    description: 未定の場合は「🔖未定」。決まっている内容があれば記載、部分的に決まってないことも明示的に記載。顧客オフィスの場合は、住所など必要な情報・リンクを記載。
+    value: "🔖未定"
+  validations:
+    required: false
+- type: dropdown
+  id: worksho-type
+  attributes:
+    label: ワークショップのタイプ
+    description: 何時間の枠かを選択
+    options:
+      - 🔖未定
+      - 0.5D
+      - 1D
+      - 1.5D
+      - 2D
+  validations:
+    required: true
+- type: dropdown 
+  id: azure
+  attributes:
+    label: Azure subscription
+    description: いずれかを選択
+    options:
+      - 🔖未定
+      - 顧客の Azure Subscription
+      - ZEN の Azure Subscription
+  validations:
+    required: true
+- type: dropdown
+  id: github
+  attributes:
+    label: GitHub
+    description: いずれかを選択
+    options:
+      - 🔖未定
+      - 顧客の GitHub
+      - ZEN の GitHub
+  validations:
+    required: true
+
+- type: textarea
+  id: tasks1
+  attributes:
+    label: "タスク: 契約関連"
+    description: "契約関連のタスクリスト"
+    value: |
+      - [ ] 契約書締結
+      - [ ] 日程確定
+      - [ ] 会議室など確保
+      - [ ] 入館証手配
+      - [ ] 利用環境の確認: Azure (顧客 or ZEN)
+      - [ ] 利用環境の確認: GitHub (顧客 or ZEN)
+      - [ ] GitHub のユーザー一覧の取得 (ZEN の GitHub 利用の場合)
+      - [ ] ZEN の GitHub のユーザー一覧を送付 (顧客 GitHub 利用の場合)
+
+      ---
+- type: textarea
+  id: tasks2
+  attributes:
+    label: "タスク: 実施関連"
+    description: "契約関連のタスクリスト"
+    value: |
+      ### Pre tasks:
+    
+      - [ ] Setup repo: 🔖URL を記載必要
+      - [ ] Run through
+      - [ ] Invite outside collaborators
+        - 🔖user list を記載必要
+    
+      ### Post tasks: [🔖実施日の記載必要]
+    
+      - [ ] Remove outside collaborators
+      - [ ] Archive repo
+
+      ---
+- type: textarea
+  id: situation
+  attributes:
+    label: 顧客情報
+    description: 顧客から聴取した現状を記載
+    placeholder: 課題感、どこまで進んでいるかなど
